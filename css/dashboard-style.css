@@ -1,0 +1,463 @@
+/*---------------------------------------------------*/
+/* 1. GLOBAL STYLES & VARIABLES
+/*---------------------------------------------------*/
+:root {
+    --primary-color: #007bff;
+    --primary-hover: #0056b3;
+    --sidebar-bg: #ffffff;
+    --main-bg: #f4f7fc;
+    --text-dark: #343a40;
+    --text-light: #6c757d;
+    --border-color: #e0e0e0;
+    --card-bg: #ffffff;
+    --shadow: 0 4px 8px rgba(0,0,0,0.05);
+    --danger-color: #dc3545;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--main-bg);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/*---------------------------------------------------*/
+/* 2. MAIN LAYOUT
+/*---------------------------------------------------*/
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 260px;
+    background-color: var(--sidebar-bg);
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100%;
+    z-index: 100;
+}
+
+.main-content {
+    flex: 1;
+    margin-left: 260px;
+    display: flex;
+    flex-direction: column;
+}
+
+/*---------------------------------------------------*/
+/* 3. HEADER STYLES
+/*---------------------------------------------------*/
+.header {
+    background-color: var(--card-bg);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.header-title h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.header-title p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin: 0;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.btn-logout {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn-logout:hover {
+    background-color: var(--primary-hover);
+}
+
+/*---------------------------------------------------*/
+/* 4. SIDEBAR NAVIGATION
+/*---------------------------------------------------*/
+.sidebar-header {
+    padding: 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.sidebar-header .logo {
+    max-width: 150px;
+    margin-bottom: 0.5rem;
+}
+
+.sidebar-header h3 {
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.sidebar-nav {
+    flex: 1;
+    padding: 1rem 0;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+}
+
+.sidebar-nav a {
+    display: flex;
+    align-items: center;
+    padding: 0.9rem 1.5rem;
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+}
+
+.sidebar-nav a:hover, .sidebar-nav a.active {
+    background-color: #e9f3ff;
+    color: var(--primary-color);
+    border-left-color: var(--primary-color);
+}
+
+.sidebar-nav a i {
+    margin-right: 1rem;
+    width: 20px;
+    text-align: center;
+}
+
+/* Submenu Styles */
+.has-submenu .submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+    background-color: #f8f9fa;
+}
+
+.has-submenu.open .submenu {
+    max-height: 500px; /* Adjust as needed */
+}
+
+.has-submenu .submenu a {
+    padding-left: 3.5rem;
+    font-size: 0.9rem;
+    border-left: none;
+}
+.has-submenu .submenu a:hover, .has-submenu .submenu a.sub-active {
+    background-color: #ddeaff;
+}
+
+/*---------------------------------------------------*/
+/* 5. MAIN CONTENT AREA & CARDS
+/*---------------------------------------------------*/
+.dashboard-overview {
+    padding: 2rem;
+    flex: 1;
+}
+
+.content-card {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+/*---------------------------------------------------*/
+/* 6. GENERAL FORM STYLES
+/*---------------------------------------------------*/
+.admission-form h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+}
+
+.button-group-right {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+}
+
+.btn-submit {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: var(--primary-hover);
+}
+
+/*---------------------------------------------------*/
+/* 10. MULTI-STEP FORM STYLES
+/*---------------------------------------------------*/
+.multi-step-form-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    background: transparent;
+}
+
+.form-progress-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.form-progress-bar::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #e0e0e0;
+    z-index: 1;
+}
+
+.form-progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: var(--progress-width, 0%);
+    height: 4px;
+    background-color: var(--primary-color);
+    z-index: 2;
+    transition: width 0.4s ease;
+}
+
+.progress-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    width: 80px; /* Give some width to prevent overlap */
+}
+
+.progress-step span {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    color: #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border: 3px solid #e0e0e0;
+    transition: all 0.4s ease;
+}
+
+.progress-step p {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+.progress-step.active span {
+    background-color: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+}
+
+.progress-step.active p {
+    color: var(--primary-color);
+}
+
+.form-step {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.form-step.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.button-group-space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.btn-next, .btn-prev {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-next {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+.btn-next:hover {
+    background-color: var(--primary-hover);
+}
+.btn-prev {
+    background-color: #6c757d;
+    color: #fff;
+}
+.btn-prev:hover {
+    background-color: #5a6268;
+}
+
+/* Document Upload Styles */
+.upload-area {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.upload-box {
+    text-align: center;
+}
+.upload-box label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+.file-input {
+    display: none;
+}
+.image-preview {
+    width: 100%;
+    height: 150px;
+    border: 2px dashed #ccc;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+.image-preview:hover {
+    border-color: var(--primary-color);
+    background-color: #e9f3ff;
+}
+.image-preview i {
+    font-size: 2.5rem;
+    color: #adb5bd;
+}
+.image-preview p {
+    margin-top: 0.5rem;
+    color: var(--text-light);
+}
+.image-preview img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*---------------------------------------------------*/
+/* 11. VALIDATION & HELPERS
+/*---------------------------------------------------*/
+.form-instruction {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+.mandatory {
+    color: var(--danger-color);
+    font-weight: bold;
+    margin-left: 2px;
+}
+.form-group input.invalid,
+.form-group select.invalid,
+.form-group textarea.invalid {
+    border-color: var(--danger-color);
+    background-color: #f8d7da;
+}
+.form-divider {
+    margin: 2rem 0;
+    border: 0;
+    border-top: 1px solid var(--border-color);
+}
+

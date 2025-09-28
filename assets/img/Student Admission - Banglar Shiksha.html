@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)http://localhost:8080/banglar-shiksha/links/student_addmission.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Admission - Banglar Shiksha</title>
+    <link rel="shortcut icon" href="https://banglarshiksha.wb.gov.in/assets/admin/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./Student Admission - Banglar Shiksha_files/all.min.css">
+    <link rel="stylesheet" href="./Student Admission - Banglar Shiksha_files/dashboard-style.css">
+<style type="text/css" id="mytempCss">._8mqQwQ { display: none; } ._1TWLMK.icF5zO { opacity: 0.01; }</style></head>
+<body data-new-gr-c-s-check-loaded="14.1255.0" data-gr-ext-installed="">
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="./Student Admission - Banglar Shiksha_files/banglar-shiksha-logo.png" alt="Banglar Shiksha Logo" class="logo">
+                <h3>Teacher Panel</h3>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="http://localhost:8080/banglar-shiksha/links/Teacher_dashboard.php" class=""><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    
+                    <li class="has-submenu ">
+                        <a href="http://localhost:8080/banglar-shiksha/links/student_addmission.php#" class="submenu-toggle"><i class="fas fa-users"></i> Student Management <i class="fas fa-chevron-down arrow"></i></a>
+                        <ul class="submenu">
+                            <li><a href="http://localhost:8080/banglar-shiksha/links/student_admission.php" class=""><i class="fas fa-user-plus"></i> Student Admission</a></li>
+                            <li><a href="http://localhost:8080/banglar-shiksha/links/rectify_student_details.php" class=""><i class="fas fa-user-edit"></i> Rectify Student Details</a></li>
+                            <li><a href="http://localhost:8080/banglar-shiksha/links/view_student_list.php" class=""><i class="fas fa-list-ul"></i> View Student List</a></li>
+                            <li><a href="http://localhost:8080/banglar-shiksha/links/promote_detain_student.php" class=""><i class="fas fa-check-circle"></i> Promote / Detain</a></li>
+                            <li><a href="http://localhost:8080/banglar-shiksha/links/student_transfer.php" class=""><i class="fas fa-exchange-alt"></i> Student Transfer</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="http://localhost:8080/banglar-shiksha/links/student_addmission.php#"><i class="fas fa-calendar-check"></i> Attendance</a></li>
+                    <li><a href="http://localhost:8080/banglar-shiksha/links/student_addmission.php#"><i class="fas fa-marker"></i> Marks Entry</a></li>
+                    <li><a href="http://localhost:8080/banglar-shiksha/links/student_addmission.php#"><i class="fas fa-book"></i> Learning Materials</a></li>
+                    <li><a href="http://localhost:8080/banglar-shiksha/links/student_addmission.php#"><i class="fas fa-bullhorn"></i> School Notices</a></li>
+                    <li><a href="http://localhost:8080/banglar-shiksha/links/student_addmission.php#"><i class="fas fa-user-cog"></i> Profile Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-title">
+                     <h1>Student Admission</h1>
+                    <p>Siliguri, West Bengal, India | <span id="current-time">Saturday 27 September, 2025 6:52:56 pm</span></p>
+                </div>
+                <div class="header-actions">
+                    <a href="http://localhost:8080/banglar-shiksha/links/student_addmission.php#" class="icon-btn"><i class="fas fa-bell"></i><span class="notification-badge">3</span></a>
+                    <a href="http://localhost:8080/banglar-shiksha/links/logout.php" class="btn btn-logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </div>
+            </header>
+
+<!-- Main Dashboard Area -->
+<section class="dashboard-overview">
+    <div class="form-container-main">
+        <form action="http://localhost:8080/banglar-shiksha/links/student_addmission.php#" method="POST" class="admission-form">
+            <h3>Basic Information</h3>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="student-name">Student Name</label>
+                    <input type="text" id="student-name" name="student_name" required="">
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" required="">
+                </div>
+                 <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender" name="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <h3>Guardian Information</h3>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="father-name">Father's Name</label>
+                    <input type="text" id="father-name" name="father_name" required="">
+                </div>
+                <div class="form-group">
+                    <label for="mother-name">Mother's Name</label>
+                    <input type="text" id="mother-name" name="mother_name" required="">
+                </div>
+                <div class="form-group">
+                    <label for="contact-number">Contact Number</label>
+                    <input type="tel" id="contact-number" name="contact_number" required="">
+                </div>
+            </div>
+             <div class="form-group">
+                <label for="address">Full Address</label>
+                <textarea id="address" name="address" rows="3" required=""></textarea>
+            </div>
+
+            <h3>Academic Details</h3>
+             <div class="form-row">
+                <div class="form-group">
+                    <label for="admission-class">Admission Class</label>
+                    <select id="admission-class" name="admission_class">
+                        <option value="Class 1">Class 1</option><option value="Class 2">Class 2</option><option value="Class 3">Class 3</option><option value="Class 4">Class 4</option><option value="Class 5">Class 5</option><option value="Class 6">Class 6</option><option value="Class 7">Class 7</option><option value="Class 8">Class 8</option><option value="Class 9">Class 9</option><option value="Class 10">Class 10</option><option value="Class 11">Class 11</option><option value="Class 12">Class 12</option>                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="previous-school">Previous School (if any)</label>
+                    <input type="text" id="previous-school" name="previous_school">
+                </div>
+            </div>
+
+            <div class="form-group button-group-right">
+                <button type="submit" class="btn-submit">Add Student</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const submenuToggles = document.querySelectorAll('.submenu-toggle');
+            submenuToggles.forEach(toggle => {
+                toggle.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    this.parentElement.classList.toggle('open');
+                });
+            });
+
+            const timeElement = document.getElementById('current-time');
+            function updateTime() {
+                 const now = new Date();
+                 timeElement.textContent = now.toLocaleDateString('en-IN', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) + ' ' + now.toLocaleTimeString('en-IN');
+            }
+            if(timeElement){
+                updateTime();
+                setInterval(updateTime, 1000);
+            }
+        });
+    </script>
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;limited&quot;,&quot;isActive&quot;:false,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
