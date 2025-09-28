@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banglar Shiksha - School Education Department, Govt. of West Bengal</title>
+    <meta name="description" content="Official portal of the School Education Department, Government of West Bengal for students, teachers, and schools.">
+    <meta name="keywords" content="Banglar Shiksha, West Bengal Education, School Education, WBSED">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> <style>
+        /* General Body Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #0056b3; /* Dark Blue */
+            color: #ffffff;
+            padding: 1rem 0;
+            border-bottom: 5px solid #ffa500; /* Saffron Orange */
+        }
+
+        .header-container {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            text-align: left;
+        }
+
+        .logo img {
+            max-height: 50px; /* Adjust as needed */
+            vertical-align: middle;
+        }
+
+        .logo h1 {
+            display: inline;
+            font-size: 1.8rem;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+        
+        .logo p {
+            margin: 5px 0 0 0;
+            font-size: 0.9rem;
+        }
+
+        /* Navigation Menu Styles */
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #004494;
+        }
+
+        /* Main Content Styles */
+        main {
+            width: 90%;
+            margin: 20px auto;
+        }
+
+        section {
+            background: #fff;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        h2, h3 {
+            color: #0056b3;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            background-color: #007bff;
+            color: white;
+            padding: 40px 20px;
+        }
+
+        .hero h2 {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 25px;
+            background-color: #ffa500;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #e69500;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .service-item {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        /* Notices Section */
+        .notice-board ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .notice-board li {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .notice-board li a {
+            text-decoration: none;
+            color: #337ab7;
+        }
+        
+        .new-tag {
+            background-color: #d9534f;
+            color: white;
+            font-size: 0.7rem;
+            padding: 2px 6px;
+            border-radius: 3px;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+
+        .view-all {
+            display: block;
+            text-align: right;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #0056b3;
+        }
+        
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="logo.png" alt="Banglar Shiksha Logo">
+                <h1>বাংলার শিক্ষা (Banglar Shiksha)</h1>
+                <p>School Education Department, Government of West Bengal</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#notices">Notices</a></li>
+                    <li><a href="login.php">Login</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Welcome to the Banglar Shiksha Portal</h2>
+            <p>Your one-stop destination for all school education needs in West Bengal.</p>
+            <a href="#" class="cta-button">Student Login</a>
+        </section>
+
+        <section id="services">
+            <h3>Our Services</h3>
+            <div class="services-grid">
+                <div class="service-item">
+                    <h4>For Students</h4>
+                    <p>Access e-books, results, and learning materials.</p>
+                </div>
+                <div class="service-item">
+                    <h4>For Teachers</h4>
+                    <p>Access teaching resources, training modules, and administrative tools.</p>
+                </div>
+                <div class="service-item">
+                    <h4>For Schools</h4>
+                    <p>Manage school profiles, student data, and official communications.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="notices">
+            <h3>Latest Notices & Announcements</h3>
+            <div class="notice-board">
+                <ul>
+                    <li><a href="#">Notice regarding upcoming scholarship examinations.</a> <span class="new-tag">New</span></li>
+                    <li><a href="#">Guidelines for school reopening post-vacation.</a></li>
+                    <li><a href="#">Circular on Teacher Transfer Portal updates.</a></li>
+                    <li><a href="#">Results of the State Level Science Exhibition declared.</a></li>
+                </ul>
+                <a href="#" class="view-all">View All Notices</a>
+            </div>
+        </section>
+
+        <section id="about">
+            <h3>About Banglar Shiksha</h3>
+            <p>The Banglar Shiksha portal is an initiative by the School Education Department, Government of West Bengal, to integrate technology in the state's education system. It aims to provide a seamless interface for students, teachers, schools, and administrators to manage academic and administrative activities efficiently.</p>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="footer-container">
+            <p>&copy; 2025 School Education Department, Government of West Bengal. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a> |
+                <a href="#">Terms of Use</a> |
+                <a href="#">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
